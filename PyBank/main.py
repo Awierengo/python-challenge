@@ -67,7 +67,8 @@ with open(BankCSV, 'r') as csvfile:
     print("Greatest Increase : " + date_list[inc_index] + " ($" + str(difference_list[inc_index]) + ")")
     print("Greatest Decrease : " + date_list[dec_index] + " ($" + str(difference_list[dec_index]) + ")")
 
-  # print("Greatest increase: " + zipped_list[inc_index])
-  # print("Greatest decrease: " + zipped_list[dec_index])
+ #  print("Greatest increase: " + list(zipped_list[inc_index]))
+ #  print("Greatest decrease: " + list(zipped_list[dec_index]))
+    
 
 
