@@ -66,3 +66,18 @@ with open(PollCSV, 'r') as csvfile:
     print("--------------------")
     print("Winner: " + winner)
     print("--------------------")
+
+    # Save to new text file
+    f = open('PyPoll.txt','w')
+    f.write("Election Results\n")
+    f.write("--------------------\n")
+    f.write("Total Votes: " + str(num_votes)+"\n")
+    f.write("--------------------\n")
+    f.write("Khan: " + str(perc_khan)+"% (" + str(khan)+")\n")
+    f.write("Correy: " + str(perc_correy) + "% (" + str(correy)+ ")\n")
+    f.write("Li: " + str(perc_li) + "% (" + str(li) + ")\n")
+    f.write("O'Tooley: " + str(perc_o_tooley) + "% ("+ str(o_tooley)+ ")\n")
+    f.write("--------------------\n")
+    f.write("Winner: " + winner+"\n")
+    f.write("--------------------\n")
+    f.close()

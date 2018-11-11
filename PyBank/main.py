@@ -10,6 +10,7 @@ with open(BankCSV, 'r') as csvfile:
     # Split the data on commas
     csvreader = csv.reader(csvfile, delimiter=',')
 
+    
     net_profit = 0
     avg_change = 0
     gr_increase = 0
@@ -70,5 +71,13 @@ with open(BankCSV, 'r') as csvfile:
  #  print("Greatest increase: " + list(zipped_list[inc_index]))
  #  print("Greatest decrease: " + list(zipped_list[dec_index]))
     
-
-
+    # Save to new file
+    f = open('PyBank.txt','w')
+    f.write("Financial Analysis\n")
+    f.write("------------------\n")
+    f.write("Total Months: " + str(len(date_list))+"\n")
+    f.write(f"Total Profits: ${str(net_profit)}\n")
+    f.write("Average Change: $" + str(round(avg_change,2))+"\n")
+    f.write("Greatest Increase : " + date_list[inc_index] + " ($" + str(difference_list[inc_index]) + ")\n")
+    f.write("Greatest Decrease : " + date_list[dec_index] + " ($" + str(difference_list[dec_index]) + ")\n")
+    f.close()
